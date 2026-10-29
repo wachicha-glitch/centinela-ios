@@ -1,0 +1,39 @@
+name: Compilar Centinela para iPhone
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ipa:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Preparar Xcode
+        run: |
+          xcodebuild -version
+          xcodebuild -showsdks | grep -q iphoneos || sudo xcodebuild -downloadPlatform iOS
+      - name: Compilar la app (sin firmar)
+        run: |
+          xcodebuild \
+            -project "Centinela.xcodeproj" \
+            -target "Centinela" \
+            -configuration Release \
+            -sdk iphoneos \
+            SYMROOT="$PWD/build" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build
+      - name: Crear Centinela.ipa
+        run: |
+          mkdir -p Payload
+          cp -R "build/Release-iphoneos/Centinela.app" Payload/
+          zip -qry "Centinela.ipa" Payload
+      - uses: actions/upload-artifact@v6
+        with:
+          name: Centinela-ipa
+          path: Centinela.ipa
+          retention-days: 30
+          if-no-files-found: error
