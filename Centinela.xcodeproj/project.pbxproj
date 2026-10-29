@@ -1,0 +1,270 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0FFEE000000000000000002 /* CentinelaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FFEE000000000000000001 /* CentinelaApp.swift */; };
+		C0FFEE000000000000000004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0FFEE000000000000000003 /* Assets.xcassets */; };
+		C0FFEE000000000000000006 /* archivo.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = C0FFEE000000000000000005 /* archivo.woff2 */; };
+		C0FFEE000000000000000008 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = C0FFEE000000000000000007 /* index.html */; };
+		C0FFEE00000000000000000A /* jetbrains-mono.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = C0FFEE000000000000000009 /* jetbrains-mono.woff2 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C0FFEE00000000000000000C /* Centinela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Centinela.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0FFEE00000000000000000B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info.plist"; sourceTree = "<group>"; };
+		C0FFEE000000000000000001 /* CentinelaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CentinelaApp.swift"; sourceTree = "<group>"; };
+		C0FFEE000000000000000003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
+		C0FFEE000000000000000005 /* archivo.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "archivo.woff2"; sourceTree = "<group>"; };
+		C0FFEE000000000000000007 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "index.html"; sourceTree = "<group>"; };
+		C0FFEE000000000000000009 /* jetbrains-mono.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jetbrains-mono.woff2"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0FFEE000000000000000013 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0FFEE00000000000000000D = {
+			isa = PBXGroup;
+			children = (
+				C0FFEE00000000000000000E /* Centinela */,
+				C0FFEE000000000000000010 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0FFEE00000000000000000E /* Centinela */ = {
+			isa = PBXGroup;
+			children = (
+				C0FFEE000000000000000001 /* CentinelaApp.swift */,
+				C0FFEE00000000000000000B /* Info.plist */,
+				C0FFEE00000000000000000F /* Web */,
+				C0FFEE000000000000000003 /* Assets.xcassets */,
+			);
+			path = "Centinela";
+			sourceTree = "<group>";
+		};
+		C0FFEE00000000000000000F /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				C0FFEE000000000000000005 /* archivo.woff2 */,
+				C0FFEE000000000000000007 /* index.html */,
+				C0FFEE000000000000000009 /* jetbrains-mono.woff2 */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		C0FFEE000000000000000010 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0FFEE00000000000000000C /* Centinela.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0FFEE000000000000000011 /* Centinela */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0FFEE000000000000000017;
+			buildPhases = (
+				C0FFEE000000000000000012 /* Sources */,
+				C0FFEE000000000000000013 /* Frameworks */,
+				C0FFEE000000000000000014 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Centinela";
+			productName = "Centinela";
+			productReference = C0FFEE00000000000000000C /* Centinela.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0FFEE000000000000000015 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					C0FFEE000000000000000011 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = C0FFEE000000000000000016;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = es;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				es,
+				Base,
+			);
+			mainGroup = C0FFEE00000000000000000D;
+			productRefGroup = C0FFEE000000000000000010 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0FFEE000000000000000011 /* Centinela */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0FFEE000000000000000014 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0FFEE000000000000000004 /* Assets.xcassets */,
+				C0FFEE000000000000000006 /* archivo.woff2 */,
+				C0FFEE000000000000000008 /* index.html */,
+				C0FFEE00000000000000000A /* jetbrains-mono.woff2 */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0FFEE000000000000000012 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0FFEE000000000000000002 /* CentinelaApp.swift */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C0FFEE000000000000000018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				SDKROOT = iphoneos;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C0FFEE000000000000000019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				SDKROOT = iphoneos;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0FFEE00000000000000001A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Centinela/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.centinela.personal.r4m8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C0FFEE00000000000000001B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Centinela/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.centinela.personal.r4m8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0FFEE000000000000000016 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0FFEE000000000000000018 /* Debug */,
+				C0FFEE000000000000000019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0FFEE000000000000000017 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0FFEE00000000000000001A /* Debug */,
+				C0FFEE00000000000000001B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0FFEE000000000000000015 /* Project object */;
+}
