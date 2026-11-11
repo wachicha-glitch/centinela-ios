@@ -10,12 +10,39 @@ jobs:
     runs-on: macos-15
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Preparar el proyecto
+        run: |
+          # Lo más fiable: subir el proyecto como un solo archivo .zip (GitHub no lo desordena).
+          # Si hay varios .zip, se usa el último que has subido.
+          rm -rf app && mkdir app
+          ZIP=""; ULT=0
+          while IFS= read -r f; do
+            t=$(git log -1 --format=%ct -- "$f" 2>/dev/null || echo 0)
+            if [ "${t:-0}" -ge "$ULT" ]; then ULT=${t:-0}; ZIP="$f"; fi
+          done < <(find . -maxdepth 2 -iname "*.zip" -not -path "./.git/*" -not -path "./app/*")
+          if [ -n "$ZIP" ]; then
+            echo "Uso el proyecto de $ZIP"
+            unzip -q "$ZIP" -d app
+          elif [ -d Centinela.xcodeproj ]; then
+            echo "Uso las carpetas subidas sueltas"
+            cp -R Centinela Centinela.xcodeproj app/
+          fi
+          PROJ=$(find app -maxdepth 4 -name "Centinela.xcodeproj" -type d | head -1)
+          if [ -z "$PROJ" ]; then
+            echo "::error::No encuentro Centinela.xcodeproj. Sube el archivo centinela-app.zip tal cual, sin descomprimir."
+            exit 1
+          fi
+          echo "DIR=$GITHUB_WORKSPACE/$(dirname "$PROJ")" >> "$GITHUB_ENV"
+          grep -m1 -o 'MARKETING_VERSION = [0-9.]*' "$PROJ/project.pbxproj" || true
       - name: Preparar Xcode
         run: |
           xcodebuild -version
           xcodebuild -showsdks | grep -q iphoneos || sudo xcodebuild -downloadPlatform iOS
       - name: Compilar la app (sin firmar)
         run: |
+          cd "$DIR"
           xcodebuild \
             -project "Centinela.xcodeproj" \
             -target "Centinela" \
@@ -28,9 +55,10 @@ jobs:
             build
       - name: Crear Centinela.ipa
         run: |
+          cd "$DIR"
           mkdir -p Payload
           cp -R "build/Release-iphoneos/Centinela.app" Payload/
-          zip -qry "Centinela.ipa" Payload
+          zip -qry "$GITHUB_WORKSPACE/Centinela.ipa" Payload
       - uses: actions/upload-artifact@v6
         with:
           name: Centinela-ipa
